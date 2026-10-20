@@ -6,7 +6,7 @@ Designed with a clean UI, dark theme, violet accents, and smooth animations to c
 
 ## 🌐 Live Demo
 
-🔗 **Portfolio:** [View Live Portfolio](YOUR_PORTFOLIO_URL)
+🔗 **Portfolio:** [View Live Portfolio](https://portfolio-two-sigma-i6ltvrfib2.vercel.app/)
 
 ## 📌 About the Project
 
