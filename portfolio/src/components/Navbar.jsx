@@ -44,12 +44,21 @@ const Navbar = () => {
   }, []);
 
   const handleNavigation = (id) => {
+    const section = document.getElementById(id);
+
+    if (!section) {
+      console.error(`Navigation target "${id}" was not found.`);
+      return;
+    }
+
     setActiveSection(id);
     setMenuOpen(false);
 
-    document.getElementById(id)?.scrollIntoView({
+    const top = section.getBoundingClientRect().top + window.scrollY - 100;
+
+    window.scrollTo({
+      top: Math.max(top, 0),
       behavior: "smooth",
-      block: "start",
     });
   };
 
@@ -215,7 +224,7 @@ const Navbar = () => {
 
               <div className="mt-4 flex items-center gap-3 border-t border-white/10 pt-5">
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/PariRastogi18"
                   target="_blank"
                   rel="noreferrer"
                   className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/10 py-3 text-sm text-zinc-300 transition hover:border-violet-400/40 hover:text-violet-300"
@@ -225,7 +234,7 @@ const Navbar = () => {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/in/pari-rastogi-907336309/"
                   target="_blank"
                   rel="noreferrer"
                   className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/10 py-3 text-sm text-zinc-300 transition hover:border-violet-400/40 hover:text-violet-300"
